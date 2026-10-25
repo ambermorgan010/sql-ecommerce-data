@@ -162,3 +162,8 @@ WHERE country LIKE 'in%';
 UPDATE cleaned_orders2
 SET country = 'Canada'
 WHERE country LIKE 'ca%';
+
+
+-- Format USD as a float
+UPDATE cleaned_orders2
+SET unit_price_usd = TRIM('$' FROM unit_price_usd);
